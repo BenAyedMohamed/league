@@ -111,54 +111,57 @@
   padding: 10px;
   margin-top: 80px;
   transition: background-color 0.3s ease;
-  overflow: auto;
+  overflow: auto; // vertical scroll by default
   flex: 1;
   height: calc(100vh - 100px); 
   min-height: 400px;
-  
+
   .container.light-mode & {
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.4);
   }
 
-  @media (max-width: 768px) {
-    margin-top: 110px;
+  // Tablet
+  @media (max-width: 1024px) {
+    margin-top: 80px;
     padding: 8px;
     border-radius: 8px;
     height: calc(100vh - 130px);
     min-height: 300px;
+
+
+    overflow-x: auto;
+
+   
+    ::ng-deep .ag-cell {
+      min-width: 13x;  
+      font-size: 15px;    
+      white-space: nowrap; 
+    }
   }
 
-  @media (max-width: 480px) {
+  // Phone
+  @media (max-width: 768px) {
     margin-top: 100px;
     padding: 5px;
     height: calc(100vh - 120px);
+
+   
+    overflow-x: auto;
+
+    ::ng-deep .ag-cell {
+      min-width: 1800px;   
+      font-size: 16px;   
+      white-space: nowrap;
+    }
   }
-  
+
   ag-grid-angular {
     width: 100% !important;
     height: 100% !important; 
-    flex: 1;
   }
 }
 
-
-/* Selected row styling */
-::ng-deep .selected-row {
-  background-color: rgba(76, 175, 80, 0.2) !important;
-  border-left: 4px solid #4caf50 !important;
-}
-
-/* AG Grid responsive adjustments */
-::ng-deep {
-  .ag-root-wrapper {
-    border-radius: 8px;
-  }
-  
-
-  
-
-}
 
 .tag-chip {
   display: inline-block;
@@ -410,7 +413,18 @@
   &:active {
     transform: translateY(0);
   }
+ @media (max-width: 1024px) {
+    bottom: 100px;
+    right: 10px;
+  }
 
+  
+  @media (max-width: 768px) {
+    bottom: 15px;
+    right: 50%;
+    transform: translateX(50%); // center it horizontally
+    width: auto;
+  }
 
 }
 

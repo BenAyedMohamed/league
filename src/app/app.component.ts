@@ -249,53 +249,53 @@ getResponsiveHeaderHeight(): number {
   { 
     field: 'id', 
     headerName: 'ID', 
-    maxWidth: 90,
+     minWidth: 90,
     cellStyle: () => {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any; // phone
-      if (width <= 1024) return { 'font-size': '16px' } as any; // tablet
+      if (width <= 1024) return { 'font-size': '18px' } as any; // tablet
       return {} as any; // desktop
     }
   },
   { 
     field: 'name', 
     headerName: 'Champion', 
-    minWidth: 100,
+    minWidth: window.innerWidth <= 1024 ? 150 : 120,
     cellStyle: () => {
       const width = window.innerWidth;
-      if (width <= 600) return { 'font-size': '180px' } as any;
-      if (width <= 1024) return { 'font-size': '16px' } as any;
+      if (width <= 600) return { 'font-size': '18px' } as any;
+      if (width <= 1024) return { 'font-size': '18px' } as any;
       return {} as any;
     }
   },
   { 
     field: 'title', 
     headerName: 'Title', 
-    minWidth: 120,
+     minWidth: window.innerWidth <= 1024 ? 200 : 120,
     cellStyle: () => {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any;
-      if (width <= 1024) return { 'font-size': '16px' } as any;
+      if (width <= 1024) return { 'font-size': '18px' } as any;
       return {} as any;
     }
   },
   {
     field: 'tags',
     headerName: 'Role(s)',
-    minWidth: 100,
+     minWidth: window.innerWidth <= 1024 ? 200 : 120,
     cellRenderer: (params: any) =>
       params.value.map((tag: string) => `<span class="tag-chip">${tag}</span>`).join(' '),
     cellStyle: () => {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any;
-      if (width <= 1024) return { 'font-size': '16px' } as any;
+      if (width <= 1024) return { 'font-size': '20px' } as any;
       return {} as any;
     }
   },
   {
     field: 'winRate',
     headerName: 'Win Rate',
-    minWidth: 90,
+     minWidth: window.innerWidth <= 1024 ? 150 : 120,
     cellRenderer: (params: any) => {
       const bgColor = params.value >= 50 ? '#4caf50' : '#f44336';
       const width = window.innerWidth;
@@ -316,25 +316,25 @@ getResponsiveHeaderHeight(): number {
     cellStyle: () => {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any;
-      if (width <= 1024) return { 'font-size': '16px' } as any;
+      if (width <= 1024) return { 'font-size': '20px', 'height': '60px'} as any;
       return {} as any;
     }
   },
   {
     field: 'pickRate',
     headerName: 'Pick Rate',
-    minWidth: 90,
+     minWidth: window.innerWidth <= 1024 ? 100 : 120,
     cellStyle: () => {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any;
-      if (width <= 1024) return { 'font-size': '16px' } as any;
+      if (width <= 1024) return { 'font-size': '20px' } as any;
       return {} as any;
     }
   },
   {
     field: 'banRate',
     headerName: 'Ban Rate',
-    minWidth: 90,
+     minWidth: window.innerWidth <= 1024 ? 100 : 120,
     cellStyle: () => {
       const width = window.innerWidth;
       if (width <= 600)
