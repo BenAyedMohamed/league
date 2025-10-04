@@ -323,7 +323,7 @@ getResponsiveHeaderHeight(): number {
   {
     field: 'pickRate',
     headerName: 'Pick Rate',
-     minWidth: window.innerWidth <= 1024 ? 100 : 120,
+     minWidth: window.innerWidth <= 1024 ? 150 : 120,
     cellStyle: () => {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any;
@@ -334,7 +334,7 @@ getResponsiveHeaderHeight(): number {
   {
     field: 'banRate',
     headerName: 'Ban Rate',
-     minWidth: window.innerWidth <= 1024 ? 100 : 120,
+     minWidth: window.innerWidth <= 1024 ? 150 : 120,
     cellStyle: () => {
       const width = window.innerWidth;
       if (width <= 600)
