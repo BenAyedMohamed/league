@@ -19,5 +19,5 @@ bootstrapApplication(AppComponent, {
     )
   ]
 }).catch(err => {
-  console.error('💥 Erreur au démarrage:', err);
+  console.error(' Erreur au démarrage:', err);
 });

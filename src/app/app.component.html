@@ -44,7 +44,7 @@
           <h2>{{ selectedChampion.name }}</h2>
           <p class="champion-title">{{ selectedChampion.title }}</p>
                 <button class="close-btn" (click)="closeModal()" aria-label="Close">&times;</button>
-          <!-- Best Stats Comparison Notice (SANS ICÔNES) -->
+          <!-- Best Stats Comparison Notice  -->
           <div class="best-stats-notice" *ngIf="!showBestStatsComparison">
             <p>💡 Compare {{ selectedChampion.name }}'s stats with the best performing champion in each category</p>
             <button class="compare-best-btn" (click)="toggleBestStatsComparison()">
@@ -175,7 +175,7 @@
     </div>
   </div>
 
-  <!-- Comparison Modal (reste identique) -->
+  <!-- Comparison Modal -->
   <div class="modal-overlay" *ngIf="showModal && isComparisonMode && selectedChampions.length >= 2" (click)="closeModal()">
     <div class="modal-content comparison-modal" [class.light-mode]="!isDarkMode" (click)="$event.stopPropagation()">
       <button class="close-btn" (click)="closeModal()" aria-label="Close">&times;</button>

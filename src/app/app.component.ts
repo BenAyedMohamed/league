@@ -50,10 +50,10 @@ export class AppComponent implements AfterViewInit {
   
 gridOptions: GridOptions = {
   animateRows: true,
-  rowHeight: this.getResponsiveRowHeight(), // Dynamic height
-  headerHeight: this.getResponsiveHeaderHeight(), // Dynamic height
+  rowHeight: this.getResponsiveRowHeight(), 
+  headerHeight: this.getResponsiveHeaderHeight(), 
   domLayout: 'normal',
-  suppressHorizontalScroll: false, // Enable horizontal scroll
+  suppressHorizontalScroll: false, 
   onRowClicked: (event: RowClickedEvent) => this.onRowClicked(event),
   onGridReady: (params: GridReadyEvent) => this.onGridReady(params),
   rowClassRules: {
@@ -63,17 +63,17 @@ gridOptions: GridOptions = {
   }
 };
 
-// Add these helper methods
+
 getResponsiveRowHeight(): number {
   if (window.innerWidth <= 480) return 70;
   if (window.innerWidth <= 768) return 60;
-  return 30; // Desktop default
+  return 30;
 }
 
 getResponsiveHeaderHeight(): number {
   if (window.innerWidth <= 480) return 80;
   if (window.innerWidth <= 768) return 70;
-  return 50; // Desktop default
+  return 50; 
 }
   
   constructor(private http: HttpClient) {
@@ -242,7 +242,7 @@ getResponsiveHeaderHeight(): number {
         this.maxPickRate = Math.max(...this.rowData.map(c => c.pickRate));
         this.maxBanRate = Math.max(...this.rowData.map(c => c.banRate));
         
-        // Calculate best stats
+        
         this.calculateBestStats();
         
         this.colDefs = [
@@ -252,9 +252,9 @@ getResponsiveHeaderHeight(): number {
      minWidth: 90,
     cellStyle: () => {
       const width = window.innerWidth;
-      if (width <= 600) return { 'font-size': '18px' } as any; // phone
-      if (width <= 1024) return { 'font-size': '18px' } as any; // tablet
-      return {'font-size': '14px'} as any; // desktop
+      if (width <= 600) return { 'font-size': '18px' } as any; 
+      if (width <= 1024) return { 'font-size': '18px' } as any; 
+      return {'font-size': '14px'} as any; 
     }
   },
   { 

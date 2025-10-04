@@ -21,8 +21,8 @@
   border-radius: 8px;
   z-index: 50;
 
-  max-width: 150px; // Cap for large screens
-  min-width: 100px; // Prevent too small
+  max-width: 150px; 
+  min-width: 100px; 
  
 }
 
@@ -121,7 +121,7 @@
     background-color: rgba(255, 255, 255, 0.4);
   }
 
-  // Tablet
+ 
   @media (max-width: 1024px) {
     margin-top: 80px;
     padding: 8px;
@@ -141,7 +141,6 @@
     }
   }
 
-  // Phone
   @media (max-width: 768px) {
     margin-top: 100px;
     padding: 5px;
@@ -423,7 +422,7 @@
   @media (max-width: 768px) {
     bottom: 15px;
     right: 50%;
-    transform: translateX(50%); // center it horizontally
+    transform: translateX(50%); 
     width: auto;
   }
 
@@ -603,7 +602,7 @@
     opacity: 1;
   }
 }
-// Ajoutez ces styles à votre fichier SCSS existant
+
 
 .best-stats-notice {
   background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 165, 0, 0.1));
@@ -842,7 +841,6 @@
   animation: pulse 2s infinite;
 }
 
-// Scrollbar personnalisé pour le modal
 .champion-details {
   &::-webkit-scrollbar {
     width: 8px;
@@ -879,14 +877,13 @@
 
 
 
-// Amélioration du bouton de suppression en mode comparaison
+
 .delete-champion-btn {
   z-index: 5;
   
 
 }
 
-// Style pour indiquer que c'est cliquable
 .best-stats-notice {
   cursor: default;
   
@@ -903,7 +900,7 @@
   }
 }
 
-// Effet de surbrillance pour les meilleures statistiques
+
 .best-bar {
   position: relative;
   overflow: hidden;
@@ -934,7 +931,6 @@
   }
 }
 
-// Indicateur visuel pour champion vs best
 .chart-bar-row {
   &:first-child .bar-name::before {
     content: '👤 ';
@@ -945,7 +941,6 @@
   }
 }
 
-// Message d'amélioration si le champion a de meilleures stats
 .champion-better {
   display: inline-block;
   margin-left: 10px;
@@ -961,7 +956,6 @@
   }
 }
 
-// Style pour le mode light sur les graphiques
 .container.light-mode {
   .chart-item {
     .bar-value {
@@ -975,7 +969,7 @@
   }
 }
 
-// Tooltip pour expliquer les stats
+
 .stat-tooltip {
   position: relative;
   display: inline-block;
@@ -1018,7 +1012,7 @@
   }
 }
 
-// Animation d'entrée pour le graphique
+
 .best-stats-comparison {
   animation: slideInFromBottom 0.5s ease;
 }
@@ -1034,7 +1028,7 @@
   }
 }
 
-// Badges de performance
+
 .performance-badge {
   display: inline-block;
   padding: 4px 10px;
@@ -1064,7 +1058,7 @@
   }
 }
 
-// Séparateur visuel
+
 .stats-divider {
   height: 1px;
   background: linear-gradient(
@@ -1085,22 +1079,9 @@
   }
 }
 
-// Footer du modal avec des infos supplémentaires
-.modal-footer {
-  margin-top: 20px;
-  padding-top: 15px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
-  text-align: center;
-  
-  .container.light-mode & {
-    border-top-color: rgba(0, 0, 0, 0.1);
-    color: rgba(0, 0, 0, 0.6);
-  }
-}
 
-// Indicateur de différence en pourcentage
+
+
 .stat-difference {
   position: absolute;
   top: 50%;
@@ -1123,7 +1104,6 @@
 
 
 
-// Animation de chargement pour les barres
 .chart-bar-row {
   opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
@@ -1148,7 +1128,6 @@
   }
 }
 
-// Hover effect pour les barres de graphique
 .bar-wrapper:hover {
   .bar {
     filter: brightness(1.1);
@@ -1162,8 +1141,6 @@
 
 
 
-
-// MOBILE RESPONSIVE STYLES - LARGER FONTS AND HORIZONTAL SCROLL
 @media (max-width: 768px) {
   ::ng-deep {
     .ag-header-cell-text {
@@ -1188,7 +1165,7 @@
       height: 36px !important;
     }
 
-    // Visible horizontal scrollbar
+  
     .ag-body-horizontal-scroll-viewport::-webkit-scrollbar {
       height: 12px !important;
     }
