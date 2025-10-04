@@ -180,7 +180,7 @@ getResponsiveHeaderHeight(): number {
   }
   
   deleteChampion(champion: any) {
-    if (confirm(`Êtes-vous sûr de vouloir supprimer ${champion.name}?`)) {
+    if (confirm(`Are you sure that you want to delete  ${champion.name}?`)) {
       this.http.delete(`api/champions/${champion.id}`).subscribe({
         next: () => {
           this.closeModal();
