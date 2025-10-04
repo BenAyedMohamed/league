@@ -254,7 +254,7 @@ getResponsiveHeaderHeight(): number {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any; // phone
       if (width <= 1024) return { 'font-size': '18px' } as any; // tablet
-      return {} as any; // desktop
+      return {'font-size': '14px'} as any; // desktop
     }
   },
   { 
@@ -265,7 +265,7 @@ getResponsiveHeaderHeight(): number {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any;
       if (width <= 1024) return { 'font-size': '18px' } as any;
-      return {} as any;
+      return {'font-size': '14px'} as any;
     }
   },
   { 
@@ -276,7 +276,7 @@ getResponsiveHeaderHeight(): number {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any;
       if (width <= 1024) return { 'font-size': '18px' } as any;
-      return {} as any;
+      return {'font-size': '14px'} as any;
     }
   },
   {
@@ -289,7 +289,7 @@ getResponsiveHeaderHeight(): number {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any;
       if (width <= 1024) return { 'font-size': '20px' } as any;
-      return {} as any;
+      return {'font-size': '14px'} as any;
     }
   },
   {
@@ -299,13 +299,13 @@ getResponsiveHeaderHeight(): number {
     cellRenderer: (params: any) => {
       const bgColor = params.value >= 50 ? '#4caf50' : '#f44336';
       const width = window.innerWidth;
-      const fontSize = width <= 600 ? '18px' : width <= 1024 ? '16px' : '14px';
+      const fontSize = width <= 600 ? '18px' : width <= 1024 ? '14px' : '14px';
       return `<span class="win-rate-box" style="
         display: inline-flex;
         align-items: center;
         justify-content: center;
         border-radius: 12px;
-        padding: 6px 16px;
+        padding: 6px 14px;
         width: 70px;
         height: 22px;
         box-sizing: border-box;
@@ -317,7 +317,7 @@ getResponsiveHeaderHeight(): number {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any;
       if (width <= 1024) return { 'font-size': '20px', 'height': '60px'} as any;
-      return {} as any;
+      return {'font-size': '14px'} as any;
     }
   },
   {
@@ -328,7 +328,7 @@ getResponsiveHeaderHeight(): number {
       const width = window.innerWidth;
       if (width <= 600) return { 'font-size': '18px' } as any;
       if (width <= 1024) return { 'font-size': '20px' } as any;
-      return {} as any;
+      return {'font-size': '14px'} as any;
     }
   },
   {
@@ -340,8 +340,8 @@ getResponsiveHeaderHeight(): number {
       if (width <= 600)
         return { color: '#d32f2f', 'font-weight': 'bold', 'text-align': 'center', 'font-size': '18px' } as any;
       if (width <= 1024)
-        return { color: '#d32f2f', 'font-weight': 'bold', 'text-align': 'center', 'font-size': '16px' } as any;
-      return { color: '#d32f2f', 'font-weight': 'bold', 'text-align': 'center' } as any;
+        return { color: '#d32f2f', 'font-weight': 'bold', 'text-align': 'center', 'font-size': '18px' } as any;
+      return { color: '#d32f2f', 'font-weight': 'bold', 'text-align': 'center','font-size': '14px' } as any;
     }
   }
 ];
